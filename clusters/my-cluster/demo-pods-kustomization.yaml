@@ -1,7 +1,7 @@
 apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
 kind: Kustomization
 metadata:
-  name: podinfo
+  name: demoapp
   namespace: flux-system
 spec:
   interval: 5m0s
@@ -9,5 +9,5 @@ spec:
   prune: true
   sourceRef:
     kind: GitRepository
-    name: podinfo
+    name: demoapp
   targetNamespace: default

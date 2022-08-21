@@ -1,20 +1,27 @@
-# demo-infra
-k3d flux stuff
+![alt text](https://dashboard.snapcraft.io/site_media/appmedia/2019/08/flux-icon2x.png) 
+# demo-infra 
 
-### installation
-READMEs inside of requirements/
 
-## create github credentials 
-requirements/github/README.txt
+A repo created following the fluxcd quickstart to deploy flux to a single node k3d cluster. 
 
-## create cluster
-k3d cluster create demo-cluster
+## Installation
+---
+./requirements contains subdirectorys for the software and credentials needed to run the cluster. Please read through them if you want to deploy this locally.
 
-## check current kubernetes cluster
-sudo kubectl config current-context 
-sudo kubectl get nodes
+## Structure
+---
 
-## check flux prereqs
-sudo flux check --pre
+### /cluster
+Flux related deployment configuration files (adding this git repo as a source for the deployment and flux config)
+
+### /demo_app
+Simple demo apps and associated dockerfiles (could and should be placed in another repo)
+
+### /demo_pods
+Deployment manifests used by flux to create pods.
+
+## Deployment
+---
+This repo will have to be cloned and a GitHub PAT will have to be created for deployment. As a k8s secret is not used env variable GITHUB_USER and GITHUB token have to be created. Once all of this is completed deploy.sh can be ran.
 
 

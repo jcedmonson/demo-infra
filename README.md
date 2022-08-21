@@ -1,5 +1,5 @@
-![alt text](https://dashboard.snapcraft.io/site_media/appmedia/2019/08/flux-icon2x.png) 
-# demo-infra 
+<h2> <img align="center" height="35" src="https://styles.redditmedia.com/t5_33f68/styles/communityIcon_w3qxa8j08vj01.png"> <img align="center" height="50" src="https://dashboard.snapcraft.io/site_media/appmedia/2019/08/flux-icon2x.png"> demo-infra  </h2>
+
 A repo created following the fluxcd quickstart to deploy flux to a single node k3d cluster. 
 
 ## Installation

@@ -1,1 +1,28 @@
 # container stuff
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: podinfo
+spec:
+  minReadySeconds: 3
+  revisionHistoryLimit: 5
+  progressDeadlineSeconds: 60
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: demoapp
+  template:
+    metadata:
+      labels:
+        app: demoapp
+    spec:
+      containers:
+      - name: frontend
+        image: jcedmonson/demo-infra-frontend:1.0
+        imagePullPolicy: IfNotPresent
+      - name: backend
+        image: jcedmonson/demo-infra-backend:1.0
+        imagePullPolicy: IfNotPresent

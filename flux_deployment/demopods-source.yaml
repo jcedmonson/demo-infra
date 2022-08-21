@@ -8,5 +8,5 @@ spec:
   interval: 30s
   ref:
     branch: main
-  url: https://github.com/rInz-l3r/demo-infra
+  url: https://github.com/jcedmonson/demo-infra
 

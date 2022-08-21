@@ -1,0 +1,25 @@
+# container stuff
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: backend
+spec:
+  minReadySeconds: 3
+  revisionHistoryLimit: 5
+  progressDeadlineSeconds: 60
+  strategy:
+    rollingUpdate:
+      maxUnavailable: 0
+    type: RollingUpdate
+  selector:
+    matchLabels:
+      app: backend
+  template:
+    metadata:
+      labels:
+        app: backend
+    spec:
+      containers:
+      - name: backend
+        image: jcedmonson/demo-infra-backend:1.0
+        imagePullPolicy: IfNotPresent

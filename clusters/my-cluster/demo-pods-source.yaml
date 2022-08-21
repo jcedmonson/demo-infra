@@ -5,7 +5,7 @@ metadata:
   name: demoapp
   namespace: flux-system
 spec:
-  interval: 30s
+  interval: 15s
   ref:
     branch: main
   url: https://github.com/jcedmonson/demo-infra

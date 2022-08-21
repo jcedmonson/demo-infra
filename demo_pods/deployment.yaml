@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: demoapp
+  name: frontend
 spec:
   minReadySeconds: 3
   revisionHistoryLimit: 5
@@ -17,12 +17,9 @@ spec:
   template:
     metadata:
       labels:
-        app: demoapp
+        app: frontend
     spec:
       containers:
       - name: frontend
         image: jcedmonson/demo-infra-frontend:1.0
-        imagePullPolicy: IfNotPresent
-      - name: backend
-        image: jcedmonson/demo-infra-backend:1.0
         imagePullPolicy: IfNotPresent

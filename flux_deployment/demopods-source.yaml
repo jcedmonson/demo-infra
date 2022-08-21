@@ -1,4 +1,5 @@
-apiVersion: source.toolkit.fluxcd.io/v1beta1
+---
+apiVersion: source.toolkit.fluxcd.io/v1beta2
 kind: GitRepository
 metadata:
   name: demo-pods
@@ -8,3 +9,4 @@ spec:
   ref:
     branch: main
   url: https://github.com/rInz-l3r/demo-infra
+

@@ -8,7 +8,7 @@ READMEs inside of requirements/
 requirements/github/README.txt
 
 ## create cluster
-k3d cluster create helloworld
+k3d cluster create demo-cluster
 
 ## check current kubernetes cluster
 sudo kubectl config current-context 

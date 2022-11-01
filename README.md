@@ -3,7 +3,7 @@
 A repo created following the fluxcd quickstart to deploy flux to a single node k3d cluster. 
 
 ## Installation
-./requirements contains subdirectorys for the software and credentials needed to run the cluster. Please read through them if you want to deploy this locally.
+./requirements contains subdirectories for the software and credentials needed to run the cluster. Please read through them if you want to deploy this locally.
 
 ## Structure
 
